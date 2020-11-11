@@ -4,9 +4,9 @@ const mail = document.querySelector("#mail");
 const btn = document.getElementById("btn");
 
 const regExPattern = {
-  name: /[a-zA-Z]{8,12}/,
-  phone: /\d{10}/,
-  mail: ^([a-Za-z0-9\.-]+)@[a-zA-Z-]{9}(\.)([a-zA-Z]{2,3})$
+  name: /^[a-zA-Z]{8,12}$/,
+  phone: /^(\+)(\d{8,14})$/,
+  mail: /^([a-z0-9\.-]+)@([a-z0-9-]+)(\.)([a-z]{2,8})$/
 }
 
 btn.addEventListener("click", () => {
